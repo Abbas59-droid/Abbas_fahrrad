@@ -17,7 +17,8 @@ public class Fahrrad
     {
         setMarke(neuMarke);
         setGaenge(neuGaenge);
-        setElektrisch(neuElektrisch);
+        setElektrisch(neuElektrisch);        
+        printFahrrad();
     }
 
     
@@ -55,6 +56,13 @@ public class Fahrrad
     
     public void printFahrrad()
     {
-        System.out.println(marke + " Fahrrad: " + gaenge + " Gaenge - " + elektrisch);
+        if (elektrisch == true)
+        {
+            System.out.println("Fahrrad: " + marke + " - " + gaenge + " Gänge - elektrisch");
+        }
+        else
+        {
+            System.out.println("Fahrrad: " + marke + " - " + gaenge + " Gänge - ohne Motor");
+        }
     }
 }
