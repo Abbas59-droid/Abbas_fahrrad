@@ -45,11 +45,19 @@ public class Fahrrad
 
     public void setGaenge(int neuGaenge)
     {
-        gaenge = neuGaenge;
+        if (neuGaenge >= 1 && neuGaenge <= 30)
+        {
+            gaenge = neuGaenge;
+        }
+        else
+        {
+            System.out.println("Fehler: Die Gänge müssen zwischen 1 und 30 liegen!");
+            gaenge = 1;
+        }
     }
 
     public void setElektrisch(boolean neuElektrisch)
-    {
+    {   
         elektrisch = neuElektrisch;
     }
 
